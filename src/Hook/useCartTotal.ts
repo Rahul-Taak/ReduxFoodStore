@@ -1,7 +1,7 @@
-import type {FoodItemListType} from "../components/FoodItem";
-import {useSelector} from "react-redux";
-import type {RootState} from "../Redux/Store.ts";
-import {useEffect, useState} from "react";
+import type { FoodItemListType } from "../components/FoodItem.tsx";
+import { useSelector } from "react-redux";
+import type { RootState } from "../Redux/Store.ts";
+import { useEffect, useState } from "react";
 
 const useCartTotal = () => {
     const [total, setTotal] = useState<number>(0);

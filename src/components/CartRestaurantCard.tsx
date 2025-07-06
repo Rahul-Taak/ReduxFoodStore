@@ -1,8 +1,8 @@
-import {decreaseCount, increaseCount, removeItem} from "../Redux/AddToCart.ts";
-import {useDispatch} from "react-redux";
-import type {FoodItemListType} from "./FoodItem";
+import { decreaseCount, increaseCount, removeItem } from "../Redux/AddToCart.ts";
+import { useDispatch } from "react-redux";
+import type { FoodItemListType } from "./FoodItem.tsx";
 import * as React from "react";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 interface CartRestaurantCardProps {
    item: FoodItemListType

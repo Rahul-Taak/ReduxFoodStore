@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import type {RestaurantType} from "../components/Dashboard";
+import { useEffect, useState } from "react";
+import type { RestaurantType } from "../components/Dashboard";
 
 const useFetchAllRestaurants = () => {
     const [restaurants, setRestaurants] = useState<RestaurantType[]>([]);
@@ -12,7 +12,6 @@ const useFetchAllRestaurants = () => {
         (async () => {
             try {
                 const response = await fetch(FETCH_URL);
-                if (!response.ok) throw new Error("Network response was not ok");
                 const json = await response.json();
                 const restaurantArr =
                     json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle

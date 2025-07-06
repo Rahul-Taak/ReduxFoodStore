@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type {FoodItemListType} from "../components/FoodItem";
+import type { FoodItemListType } from "../components/FoodItem";
 
 type ReduxActionType = { payload: FoodItemListType, type: string }
 
@@ -25,9 +25,12 @@ const AddToCartSlice = createSlice({
         decreaseCount: (state: FoodItemListType[], action: ReduxActionType) => {
             const item = state.find((item: FoodItemListType) => isIdSame(item,  action));
             if (item && item.count && item.count > 1) item.count -= 1;
+        },
+        clearCart: (state: FoodItemListType[]) => {
+            state.length = 0;
         }
     }
 })
 
-export const { addItem, removeItem, increaseCount, decreaseCount } = AddToCartSlice.actions;
+export const { addItem, removeItem, increaseCount, decreaseCount, clearCart } = AddToCartSlice.actions;
 export default AddToCartSlice.reducer;

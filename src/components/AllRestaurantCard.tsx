@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type {ResDetails} from "./Dashboard";
+import type { ResDetails } from "./Dashboard";
 import * as React from "react";
 
 interface AllRestaurantCardProps {
@@ -38,9 +38,6 @@ const AllRestaurantCard: React.FC<AllRestaurantCardProps> = ({ restaurant }) => 
             </li>
             <li className="text-md">
               <span>Rating:</span> <span>{restaurant?.avgRating}</span>
-            </li>
-            <li className="text-md">
-              <span>Cuisines:</span> <span>{restaurant?.cuisines?.slice(0, 3)}</span>
             </li>
             <li className="text-md">
               <span>CostForTwo:</span> <span>{restaurant?.costForTwo}</span>
